@@ -1,0 +1,10 @@
+{
+  "slug": "cafe-cursor-thumbnail-maker",
+  "name": "Kane Clerke",
+  "contribution": "Built a browser app to drop screenshots into real Apple device frames and export project-board thumbnails.",
+  "github": "https://github.com/valkyriak/cafe-cursor-thumbnail-maker",
+  "headline": "Thumbnail maker for the project board",
+  "summary": "A self-contained React app for Cafe Cursor Brisbane contributors: upload a screenshot, pick MacBook, iPhone, or Studio Display frames, style the background, optionally add your project name, and export PNG or JPG cover images for your board card.",
+  "body": "The Cafe Cursor Brisbane board needs a strong cover image for every project card. This tool runs entirely in the browser — clone the repo, run npm install && npm run dev, and export a polished mockup in minutes.\n\nIt uses real Apple device frame PNGs, solid/gradient/image backgrounds, Google Fonts for optional project titles, and html-to-image for export. No backend, no uploads — everything stays on your machine.\n\nRepo: https://github.com/valkyriak/cafe-cursor-thumbnail-maker",
+  "coverImage": "/contributions/cafe-cursor-thumbnail-maker/cover.png"
+}

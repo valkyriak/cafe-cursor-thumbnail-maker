@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 4%;
+
+    --primary: 240 6% 10%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 6% 10%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 240 5% 96%;
+    --accent-foreground: 240 6% 10%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 24 95% 53%;
+
+    --brand: 22 95% 54%;
+    --brand-foreground: 0 0% 100%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1, "ss01" 1;
+  }
+}
+
+@layer utilities {
+  .checkerboard {
+    background-image:
+      linear-gradient(45deg, hsl(240 5% 92%) 25%, transparent 25%),
+      linear-gradient(-45deg, hsl(240 5% 92%) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, hsl(240 5% 92%) 75%),
+      linear-gradient(-45deg, transparent 75%, hsl(240 5% 92%) 75%);
+    background-size: 16px 16px;
+    background-position:
+      0 0,
+      0 8px,
+      8px -8px,
+      -8px 0;
+  }
+
+  /*
+   * Glyph-following white outline via multi-directional text-shadow.
+   * text-shadow is applied per-glyph by the browser renderer, so it traces
+   * letter edges rather than the bounding box. No -webkit-text-stroke needed.
+   */
+  .landing-sticker-title {
+    text-shadow:
+      -4px -4px 0 #fff, 0 -4px 0 #fff, 4px -4px 0 #fff,
+      -4px 0 0 #fff, 4px 0 0 #fff,
+      -4px 4px 0 #fff, 0 4px 0 #fff, 4px 4px 0 #fff,
+      -3px -3px 0 #fff, 0 -3px 0 #fff, 3px -3px 0 #fff,
+      -3px 0 0 #fff, 3px 0 0 #fff,
+      -3px 3px 0 #fff, 0 3px 0 #fff, 3px 3px 0 #fff,
+      -2px -2px 0 #fff, 0 -2px 0 #fff, 2px -2px 0 #fff,
+      -2px 0 0 #fff, 2px 0 0 #fff,
+      -2px 2px 0 #fff, 0 2px 0 #fff, 2px 2px 0 #fff,
+      -1px -1px 0 #fff, 0 -1px 0 #fff, 1px -1px 0 #fff,
+      -1px 0 0 #fff, 1px 0 0 #fff,
+      -1px 1px 0 #fff, 0 1px 0 #fff, 1px 1px 0 #fff,
+      0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+}
