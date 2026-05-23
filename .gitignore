@@ -27,4 +27,5 @@ dist-ssr
 .tmp
 .venv
 .upstream
+board-contribution
 
